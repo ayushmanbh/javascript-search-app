@@ -29,6 +29,7 @@ const createResultItem = (result) => {
   resultItem.classList.add("resultItem")
   const resultTitle = document.createElement("div")
   resultTitle.classList.add("resultTitle")
+  resultTitle.title = `Go to ${result.title}`
   const link = document.createElement("a")
   link.href = `https://en.wikipedia.org/?curid=${result.id}`
   link.textContent = result.title
@@ -44,6 +45,7 @@ const createResultImage = (result) => {
   const img = document.createElement("img")
   img.src = result.img
   img.alt = result.title
+  img.title = result.title
   resultImage.append(img)
   return resultImage
 }
